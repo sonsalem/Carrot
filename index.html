@@ -1,0 +1,1550 @@
+<!DOCTYPE html>
+<html lang="en" style="--color-theme: #64b496">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FavIcon -->
+    <link rel="icon" href="img/favicon.png">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Font Awesome Libaray -->
+    <link rel="stylesheet" href="css/fontawesome.css">
+    <link rel="stylesheet"  href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css">
+    <!-- Animate Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- Owl Carousel Library -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <!-- Bootstrap Library -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Mian CSS File -->
+    <link rel="stylesheet" href="css/carrot.css">
+    <!-- Title Of Page -->
+    <title>Carrot</title>
+  </head>
+  <body>
+    <!-- Start Loading -->
+    <div class="loading position-fixed w-100 h-100 top-0 start-0 d-flex align-items-center justify-content-center t-duration">
+      <svg class="progress-ring wow rotateIn" width="120" height="120">
+        <circle class="progress-ring__circle" stroke="var(--Primary-color)" stroke-width="4" fill="transparent" r="52" cx="60" cy="60"/>
+      </svg>
+    </div>
+    <!-- End Loading -->
+    <!-- Start Navbar -->
+    <div class="navbar py-0">
+      <div class="container">
+        <div class="uppernav w-100 d-flex align-items-center justify-content-center justify-content-sm-between gap flex-wrap flex-sm-nowrap py-3 my-2" style="--gap:30px;">
+          <div class="logo">
+            <a href="index.html">
+              <img src="img/logo.png" alt="logo" class="logoSite">
+            </a>
+          </div>
+          <form action="" class="search-F rounded-2 d-flex">
+            <input type="text" name="se" id="se" class="border-p px-3 rounded-start fs-13 bg-transparent" placeholder="Search for items...">
+            <div class="select position-relative">
+              <select name="sleectSearch" id="sleectSearch" class="border-p h-100 fs-13 ps-md-3 pe-md-5 ps-2 pe-3 border-start-0 pointer bg-transparent">
+                <option value="All">All Categories</option>
+              </select>
+            </div>
+            <a href="search.html" class="bg-primary text-light d-flex align-items-center justify-content-center px-3 rounded-end">
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </a>
+          </form>
+          <div class="tools gap d-none d-lg-flex" style="--gap: 30px;">
+            <div class="tool d-flex align-items-center toggle-menu t-duration">
+              <div class="text t-duration d-flex align-items-center">
+                <i class="fa-light fa-user me-2 lead"></i>
+                Accounts
+              </div>
+              <ul class="menu">
+                <li class="mb-2">
+                  <a href="register.html" class="c-primary-hover t-duration fs-13">Register</a>
+                </li>
+                <li class="mb-2">
+                  <a href="register.html" class="c-primary-hover t-duration fs-13">Login</a>
+                </li>
+                <li>
+                  <a href="register.html" class="c-primary-hover t-duration fs-13">Checkout</a>
+                </li>
+              </ul>
+            </div>
+            <div class="tool d-flex align-items-center toggle-menu t-duration">
+              <div class="text t-duration d-flex align-items-center">
+                <i class="fa-light fa-heart me-2 lead"></i>
+                WhishList
+              </div>
+            </div>
+            <div class="tool d-flex align-items-center toggle-menu t-duration" id="Cart">
+              <div class="text t-duration d-flex align-items-center">
+                <i class="fa-light fa-cart-shopping me-2 lead"></i>
+                Cart
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="downnav w-100 t-duration">
+          <div class="container d-flex align-items-center justify-content-between py-2 w-100">
+            <div class="openSideMenu pointer d-lg-none">
+              <i class="fa-light fa-bars lead"></i>
+            </div>
+            <div class="infoMenu toggle-menu t-duration p-0 d-none d-lg-block">
+              <div class="logo border-g rounded-2 d-flex align-items-center justify-content-center">
+                <i class="fa-light fa-bars lead"></i>
+              </div>
+              <ul class="menu d-flex py-3">
+                <div class="headings px-3">
+                  <div class="heading active fs-13 fw-bold border-g p-2 rounded-2 mb-2 t-duration" id="dairy">Dairy & Bakery</div>
+                  <div class="heading fs-13 fw-bold border-g p-2 rounded-2 mb-2 t-duration" id="fruits">Fruits & Vegetable</div>
+                  <div class="heading fs-13 fw-bold border-g p-2 rounded-2 mb-2 t-duration" id="snack">Snack & Spice</div>
+                  <div class="heading fs-13 fw-bold border-g p-2 rounded-2 mb-2 t-duration" id="juice">Juice & Drinks</div>
+                  <a href="#">
+                    <div class="heading fs-13 fw-bold border-g p-2 rounded-2 mb-2 t-duration">View All</div>
+                  </a>
+                </div>
+                <div class="contents">
+                  <div class="content d-flex w-100 t-duration" data-content="dairy">
+                    <div class="box px-3">
+                      <div class="title pb-2 c-primary mb-3">Dairy</div>
+                      <ul class="kinds">
+                        <li class="text-truncate fs-13 mb-3 c-gray">Milk</li>
+                        <li class="text-truncate fs-13 mb-3 c-gray">Ice Cream</li>
+                        <li class="text-truncate fs-13 mb-3 c-gray">Cheese</li>
+                        <li class="text-truncate fs-13 mb-3 c-gray">Frozen Custard</li>
+                        <li class="text-truncate fs-13 mb-3 c-gray">Frozen Yogurt</li>
+                      </ul>
+                    </div>
+                    <div class="box px-3">
+                      <div class="title pb-2 c-primary mb-3">Bakery</div>
+                      <ul class="kinds">
+                        <li class="text-truncate fs-13 mb-3 c-gray">Cake And Pastry</li>
+                        <li class="text-truncate fs-13 mb-3 c-gray">Rusk Toast</li>
+                        <li class="text-truncate fs-13 mb-3 c-gray">Bread & Buns</li>
+                        <li class="text-truncate fs-13 mb-3 c-gray">Chocolate Brownie</li>
+                        <li class="text-truncate fs-13 mb-3 c-gray">Cream Roll</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="content d-flex w-100 t-duration hide" data-content="fruits">
+                    <div class="box px-3">
+                      <div class="title pb-2 c-primary mb-3">Fruits</div>
+                      <ul class="kinds">
+                        <li class="text-truncate fs-13 mb-3 c-gray">Cauliflower</li>
+                        <li class="text-truncate fs-13 mb-3 c-gray">Bell Peppers</li>
+                        <li class="text-truncate fs-13 mb-3 c-gray">Broccoli</li>
+                        <li class="text-truncate fs-13 mb-3 c-gray">Cabbage</li>
+                        <li class="text-truncate fs-13 mb-3 c-gray">Tomato</li>
+                      </ul>
+                    </div>
+                    <div class="box px-3">
+                      <div class="title pb-2 c-primary mb-3">Vegetable</div>
+                      <ul class="kinds">
+                        <li class="text-truncate fs-13 mb-3 c-gray">Cauliflower</li>
+                        <li class="text-truncate fs-13 mb-3 c-gray">Bell Peppers</li>
+                        <li class="text-truncate fs-13 mb-3 c-gray">Broccoli</li>
+                        <li class="text-truncate fs-13 mb-3 c-gray">Cabbage</li>
+                        <li class="text-truncate fs-13 mb-3 c-gray">Tomato</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="content d-flex w-100 t-duration hide" data-content="snack">
+                    <div class="box px-3">
+                      <div class="title pb-2 c-primary mb-3">Snack</div>
+                      <ul class="kinds">
+                        <li class="text-truncate fs-13 mb-3 c-gray">French Fries</li>
+                        <li class="text-truncate fs-13 mb-3 c-gray">Potato Chips</li>
+                        <li class="text-truncate fs-13 mb-3 c-gray">Biscuits & Cookies</li>
+                        <li class="text-truncate fs-13 mb-3 c-gray">Popcorn</li>
+                        <li class="text-truncate fs-13 mb-3 c-gray">Rice Cakes</li>
+                      </ul>
+                    </div>
+                    <div class="box px-3">
+                      <div class="title pb-2 c-primary mb-3">Spice</div>
+                      <ul class="kinds">
+                        <li class="text-truncate fs-13 mb-3 c-gray">Cinnamon Powder</li>
+                        <li class="text-truncate fs-13 mb-3 c-gray">Cumin Powder</li>
+                        <li class="text-truncate fs-13 mb-3 c-gray">Fenugreek Powder</li>
+                        <li class="text-truncate fs-13 mb-3 c-gray">Pepper Powder</li>
+                        <li class="text-truncate fs-13 mb-3 c-gray">Long Pepper</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="content d-flex w-100 t-duration hide" data-content="juice">
+                    <div class="box px-3">
+                      <div class="title pb-2 c-primary mb-3">Juice</div>
+                      <ul class="kinds">
+                        <li class="text-truncate fs-13 mb-3 c-gray">Mango Juice</li>
+                        <li class="text-truncate fs-13 mb-3 c-gray">Coconut Water</li>
+                        <li class="text-truncate fs-13 mb-3 c-gray">Tetra Pack</li>
+                        <li class="text-truncate fs-13 mb-3 c-gray">zApple Juices</li>
+                        <li class="text-truncate fs-13 mb-3 c-gray">Lychee Juice</li>
+                      </ul>
+                    </div>
+                    <div class="box px-3">
+                      <div class="title pb-2 c-primary mb-3">Soft Drinks</div>
+                      <ul class="kinds">
+                        <li class="text-truncate fs-13 mb-3 c-gray">Mango Juice</li>
+                        <li class="text-truncate fs-13 mb-3 c-gray">Coconut Water</li>
+                        <li class="text-truncate fs-13 mb-3 c-gray">Tetra Pack</li>
+                        <li class="text-truncate fs-13 mb-3 c-gray">zApple Juices</li>
+                        <li class="text-truncate fs-13 mb-3 c-gray">Lychee Juice</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </ul>
+            </div>
+            <ul class="main-menu-header align-items-center gap d-none d-lg-flex" style="--gap:30px">
+              <a href="index.html" class="toggle-menu t-duration singal">
+                <span class="text fw-bold t-duration fs-15 pe-2">Home</span>
+              </a>
+              <a href="about.html" class="toggle-menu t-duration singal">
+                <span class="text fw-bold t-duration fs-15 pe-2">About Us</span>
+              </a>
+              <li class="t-duration toggle-menu">
+                <span class="text fw-bold t-duration fs-15 pe-4">Category</span>
+                <ul class="menu">
+                  <li class="t-duration fs-13 c-primary-hover mb-2">Bakery</li>
+                  <li class="t-duration fs-13 c-primary-hover mb-2">Fruits</li>
+                  <li class="t-duration fs-13 c-primary-hover mb-2">Vegetable</li>
+                  <li class="t-duration fs-13 c-primary-hover mb-2">Snack</li>
+                  <li class="t-duration fs-13 c-primary-hover mb-2">Spice</li>
+                </ul>
+              </li>
+              <li class="t-duration toggle-menu">
+                <span class="text fw-bold t-duration fs-15 pe-4">Products</span>
+                <ul class="menu">
+                  <li class="t-duration fs-13 c-primary-hover mb-2">Bakery</li>
+                  <li class="t-duration fs-13 c-primary-hover mb-2">Fruits</li>
+                  <li class="t-duration fs-13 c-primary-hover mb-2">Vegetable</li>
+                </ul>
+              </li>
+              <li class="t-duration toggle-menu">
+                <span class="text fw-bold t-duration fs-15 pe-4">Pages</span>
+                <ul class="menu">
+                  <li class="t-duration fs-13 c-primary-hover mb-2">Anime</li>
+                  <li class="t-duration fs-13 c-primary-hover mb-2">Manga</li>
+                </ul>
+              </li>
+            </ul>
+            <a href="https://wa.me/201556617801" class="phone c-primary-hover d-none d-lg-block">
+              <i class="fa-thin fa-phone me-2"></i>
+              +20 1556 617 801
+            </a>
+            <div class="tools gap d-flex d-lg-none" style="--gap: 20px;">
+              <div class="tool d-flex align-items-center toggle-menu t-duration">
+                <div class="text t-duration d-flex align-items-center">
+                  <i class="fa-light fa-user me-2"></i>
+                </div>
+                <ul class="menu">
+                  <li class="mb-2">
+                    <a href="register.html" class="c-primary-hover t-duration fs-13">Register</a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="register.html" class="c-primary-hover t-duration fs-13">Login</a>
+                  </li>
+                  <li>
+                    <a href="register.html" class="c-primary-hover t-duration fs-13">Checkout</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="tool d-flex align-items-center toggle-menu t-duration">
+                <div class="text t-duration d-flex align-items-center">
+                  <i class="fa-light fa-heart me-2"></i>
+                </div>
+              </div>
+              <div class="tool d-flex align-items-center toggle-menu t-duration" id="Cart">
+                <div class="text t-duration d-flex align-items-center">
+                  <i class="fa-light fa-cart-shopping me-2"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Navbar -->
+    <!-- Aside Mobile Menu -->
+    <aside class="menuMobile fixed-top p-4">
+      <div class="d-flex align-items-center justify-content-between border-bot-g py-3 mb-3">
+        <div class="heading lead c-primary fw-bold">My Menu</div>
+        <div class="closeSideMenu pointer">
+          <i class="fa fa-xmark lead c-gray" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="links">
+        <div class="link">
+          <div class="d-flex align-items-center justify-content-between border-bot-g py-2 mb-2">
+            <a href="index.html" class="fw-bold fs-15 c-primary-hover">Home</a>
+          </div>
+        </div>
+        <div class="link">
+          <div class="d-flex align-items-center justify-content-between border-bot-g py-2 mb-2">
+            <a href="about.hml" class="fw-bold fs-15 c-primary-hover">About</a>
+          </div>
+        </div>
+        <div class="link">
+          <div class="heading d-flex pointer align-items-center justify-content-between border-bot-g py-2 mb-2">
+            <div class="fw-bold fs-15">Category</div>
+            <i class="fa fa-plus c-gray" aria-hidden="true"></i>
+          </div>
+          <ul class="menu">
+            <li class="t-duration fs-13 c-primary-hover mb-2 pointer ps-2 c-gray border-bot-g py-1">Bakery</li>
+            <li class="t-duration fs-13 c-primary-hover mb-2 pointer ps-2 c-gray border-bot-g py-1">Fruits</li>
+            <li class="t-duration fs-13 c-primary-hover mb-2 pointer ps-2 c-gray border-bot-g py-1">Vegetable</li>
+            <li class="t-duration fs-13 c-primary-hover mb-2 pointer ps-2 c-gray border-bot-g py-1">Snack</li>
+            <li class="t-duration fs-13 c-primary-hover mb-2 pointer ps-2 c-gray border-bot-g py-1">Spice</li>
+          </ul>
+        </div>
+        <div class="link">
+          <div class="heading d-flex pointer align-items-center justify-content-between border-bot-g py-2 mb-2">
+            <div class="fw-bold fs-15">Products</div>
+            <i class="fa fa-plus c-gray" aria-hidden="true"></i>
+          </div>
+          <ul class="menu">
+            <li class="t-duration fs-13 c-primary-hover mb-2 pointer ps-2 c-gray border-bot-g py-1">Bakery</li>
+            <li class="t-duration fs-13 c-primary-hover mb-2 pointer ps-2 c-gray border-bot-g py-1">Fruits</li>
+            <li class="t-duration fs-13 c-primary-hover mb-2 pointer ps-2 c-gray border-bot-g py-1">Vegetable</li>
+          </ul>
+        </div>
+        <div class="link">
+          <div class="heading d-flex pointer align-items-center justify-content-between border-bot-g py-2 mb-2">
+            <div class="fw-bold fs-15">Pages</div>
+            <i class="fa fa-plus c-gray" aria-hidden="true"></i>
+          </div>
+          <ul class="menu">
+            <li class="t-duration fs-13 c-primary-hover mb-2 pointer ps-2 c-gray border-bot-g py-1">Anime</li>
+            <li class="t-duration fs-13 c-primary-hover mb-2 pointer ps-2 c-gray border-bot-g py-1">Manga</li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+    <!-- Aside Mobile Menu -->
+    <!-- Start Landing -->
+    <div class="landing pb-5" style="z-index: 0;">
+      <div class="container-fluid h-100">
+        <div class="owl-carousel owl-theme owl-land h-100">
+          <div class="item rounded-4 d-flex align-items-center position-relative" style="background: url(img/banner-2.jpg) center center / cover no-repeat;">
+            <div class="shapes">
+              <img src="img/2.png" alt="img" class="topLeft position-absolute top-0 start-0">
+              <img src="img/3.png" alt="img" class="pin position-absolute bottom-0 end-0">
+              <img src="img/4.png" alt="img" class="apple position-absolute">
+              <img src="img/5.png" alt="img" class="dish position-absolute">
+            </div>
+            <div class="box">
+              <div class="title fw-bold mb-3 t-duration">
+                <span class="c-primary">100%</span>
+                Organic fruits
+              </div>
+              <div class="dec mb-3 t-duration">Explore frech & juicy fruits</div>
+              <div class="dec-2 fs-15 c-gray mb-3 t-duration">Lorem ipsum dolor sit amet consectetur adipisicing elit dolor sit amet consectetur adipisicing elit.</div>
+              <div class="but">
+                <div class="main-button">Shope Now</div>
+              </div>
+            </div>
+          </div>
+          <div class="item rounded-4 d-flex align-items-center position-relative" style="background: url(img/banner.jpg) center center / cover no-repeat;">
+            <div class="shapes">
+              <img src="img/2.png" alt="img" class="topLeft position-absolute top-0 start-0">
+              <img src="img/3.png" alt="img" class="pin position-absolute bottom-0 end-0">
+              <img src="img/4.png" alt="img" class="apple position-absolute">
+              <img src="img/5.png" alt="img" class="dish position-absolute">
+            </div>
+            <div class="box">
+              <div class="title fw-bold mb-3 t-duration">
+                <span class="c-primary">100%</span>
+                Organic fruits
+              </div>
+              <div class="dec mb-3 t-duration">The best way to stuff your wallt</div>
+              <div class="dec-2 fs-15 c-gray mb-3 t-duration">Lorem ipsum dolor sit amet consectetur adipisicing elit dolor sit amet consectetur adipisicing elit.</div>
+              <div class="but">
+                <div class="main-button">Shope Now</div>
+              </div>
+            </div>
+          </div>
+          <div class="item rounded-4 d-flex align-items-center position-relative" style="background: url(img/bg-deal.jpg) center center / cover no-repeat;">
+            <div class="shapes">
+              <img src="img/2.png" alt="img" class="topLeft position-absolute top-0 start-0">
+              <img src="img/3.png" alt="img" class="pin position-absolute bottom-0 end-0">
+              <img src="img/4.png" alt="img" class="apple position-absolute">
+              <img src="img/5.png" alt="img" class="dish position-absolute">
+            </div>
+            <div class="box">
+              <div class="title fw-bold mb-3 t-duration">
+                <span class="c-primary">100%</span>
+                Organic fruits
+              </div>
+              <div class="dec mb-3 t-duration">Explore frech & Green Burger</div>
+              <div class="dec-2 fs-15 c-gray mb-3 t-duration">Lorem ipsum dolor sit amet consectetur adipisicing elit dolor sit amet consectetur adipisicing elit.</div>
+              <div class="but">
+                <div class="main-button">Shope Now</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Landing -->
+    <!-- Start Categories -->
+    <div class="category">
+      <div class="container">
+        <div class="owl-carousel owl-cat owl-theme">
+          <div class="item Category-block">
+            <div class="box bg-gray border-g p-2 text-center rounded-4 pointer">
+              <div class="circle-item rounded-circle mx-auto mb-2 d-flex align-items-center justify-content-center" style="background-color: #ecf0ff;">
+                <i class="fa-thin fa-peach"></i>
+              </div>
+              <div class="title text-capitalize fs-15 fw-bold mb-1">Fruits</div>
+              <div class="c-gray text-capitalize fs-13 fw-bold mb-2">(32 Items)</div>
+            </div>
+          </div>
+          <div class="item Category-block">
+            <div class="box bg-gray border-g p-2 text-center rounded-4 pointer">
+              <div class="circle-item rounded-circle mx-auto mb-2 d-flex align-items-center justify-content-center" style="background-color: #f9f9d9;">
+                <i class="fa-thin fa-leafy-green"></i>
+              </div>
+              <div class="title text-capitalize fs-15 fw-bold mb-1">Bakry</div>
+              <div class="c-gray text-capitalize fs-13 fw-bold mb-2">(50 Items)</div>
+            </div>
+          </div>
+          <div class="item Category-block">
+            <div class="box bg-gray border-g p-2 text-center rounded-4 pointer">
+              <div class="circle-item rounded-circle mx-auto mb-2 d-flex align-items-center justify-content-center" style="background-color: #fde1f5;">
+                <i class="fa-thin fa-cookie-bite"></i>
+              </div>
+              <div class="title text-capitalize fs-15 fw-bold mb-1">Dariy</div>
+              <div class="c-gray text-capitalize fs-13 fw-bold mb-2">(46 Items)</div>
+            </div>
+          </div>
+          <div class="item Category-block">
+            <div class="box bg-gray border-g p-2 text-center rounded-4 pointer">
+              <div class="circle-item rounded-circle mx-auto mb-2 d-flex align-items-center justify-content-center" style="background-color: #ffeae9;">
+                <i class="fa-thin fa-wine-glass-empty"></i>
+              </div>
+              <div class="title text-capitalize fs-15 fw-bold mb-1">Juices</div>
+              <div class="c-gray text-capitalize fs-13 fw-bold mb-2">(20 Items)</div>
+            </div>
+          </div>
+          <div class="item Category-block">
+            <div class="box bg-gray border-g p-2 text-center rounded-4 pointer">
+              <div class="circle-item rounded-circle mx-auto mb-2 d-flex align-items-center justify-content-center" style="background-color: #e2fde2;">
+                <i class="fa-thin fa-salad"></i>
+              </div>
+              <div class="title text-capitalize fs-15 fw-bold mb-1">Vegetable</div>
+              <div class="c-gray text-capitalize fs-13 fw-bold mb-2">(80 Items)</div>
+            </div>
+          </div>
+          <div class="item Category-block">
+            <div class="box bg-gray border-g p-2 text-center rounded-4 pointer">
+              <div class="circle-item rounded-circle mx-auto mb-2 d-flex align-items-center justify-content-center" style="background-color: #fff6ec;">
+                <i class="fa-thin fa-burger-lettuce"></i>
+              </div>
+              <div class="title text-capitalize fs-15 fw-bold mb-1">Snacks</div>
+              <div class="c-gray text-capitalize fs-13 fw-bold mb-2">(230 Items)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Categories -->
+    <!-- Start Popular Products -->
+    <div class="popular-prod position-relative py-5">
+      <div class="container">
+        <div class="text-center section-heading mx-auto mb-4">
+          <h2 class="fw-bolder mb-2">Popular Products</h2>
+          <div class="c-gray fs-13">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore lacus vel facilisis.</div>
+        </div>
+        <div class="row position-relative">
+          <div class="col-xl-3 col-lg-4 d-flex mb-4 position-lg-sticky top-0">
+            <div class="row w-100 align-content-start">
+              <div class="col-lg-12 col-6 items-panle mb-lg-4">
+                <div class="item t-duration d-flex align-items-center justify-content-between p-3 rounded-2 bg-gray border-g pointer mb-2 active" id="all">
+                  <div class="fs-15 fw-bold">All</div>
+                  <div class="icon">
+                    <i class="fa-solid fa-arrow-right fs-15"></i>
+                  </div>
+                </div>
+                <div class="item t-duration d-flex align-items-center justify-content-between p-3 rounded-2 bg-gray border-g pointer mb-2" id="snake">
+                  <div class="fs-15 fw-bold">Snake</div>
+                  <div class="icon">
+                    <i class="fa-solid fa-arrow-right fs-15"></i>
+                  </div>
+                </div>
+                <div class="item t-duration d-flex align-items-center justify-content-between p-3 rounded-2 bg-gray border-g pointer mb-2" id="vegetable">
+                  <div class="fs-15 fw-bold">Vegetable</div>
+                  <div class="icon">
+                    <i class="fa-solid fa-arrow-right fs-15"></i>
+                  </div>
+                </div>
+                <div class="item t-duration d-flex align-items-center justify-content-between p-3 rounded-2 bg-gray border-g pointer mb-2" id="fruit">
+                  <div class="fs-15 fw-bold">Fruit</div>
+                  <div class="icon">
+                    <i class="fa-solid fa-arrow-right fs-15"></i>
+                  </div>
+                </div>
+                <div class="item t-duration d-flex align-items-center justify-content-between p-3 rounded-2 bg-gray border-g pointer" id="bakery">
+                  <div class="fs-15 fw-bold">Bakery</div>
+                  <div class="icon">
+                    <i class="fa-solid fa-arrow-right fs-15"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-12 col-6">
+                <div class="box productPop py-5 px-3 h-100 rounded-2">
+                  <div class="display-6 text-light mb-2">Juicy</div>
+                  <div class="display-6 fw-bolder" style="color: #f7e8aa;">FRUITS</div>
+                  <div class="text-light mb-3">100% Natural</div>
+                  <div class="main-button">Shope Now</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-9 col-lg-8">
+            <div class="row contents">
+              <div class="col-xl-3 col-sm-6 mb-4 productFilter" data-content="vegetable">
+                <div class="product overflow-hidden position-relative p-2 border-g rounded-2 t-duration">
+                  <div class="loveProduct t-duration position-absolute d-flex align-items-center justify-content-center c-primary rounded-circle bg-gray border-g pointer">
+                    <i class="fa-thin fa-heart"></i>
+                  </div>
+                  <div class="image border-bot-g rounded-2 position-relative">
+                    <img src="img/product-1.jpg" alt="img" class="img-fluid rounded-2">
+                    <div class="overflow-hidden rounded-2 w-100 h-100 position-absolute start-0 top-0">
+                      <div class="zoomeImage position-absolute">
+                        <img src="img/product-1.jpg" alt="zoom" class="rounded-2">
+                      </div>
+                    </div>
+                    <div class="lockCart t-duration position-absolute start-50 top-100 translate-middle d-flex align-items-center justify-content-center c-primary rounded-circle bg-gray border-g pointer">
+                      <i class="fa-thin fa-lock" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="text text-center pt-4 mt-2">
+                    <div class="kind fs-13 c-gray mb-1">Vegetable</div>
+                    <div class="starts d-flex align-items-center justify-content-center mb-2">
+                      <i class="fa-solid fa-star star fs-13 me-1"></i>
+                      <i class="fa-solid fa-star star fs-13 me-1"></i>
+                      <i class="fa-solid fa-star star fs-13 me-1"></i>
+                      <i class="fa-solid fa-star star fs-13 me-1"></i>
+                      <i class="fa-thin fa-star star fs-13 me-1"></i>
+                      <div class="fs-13 c-gray ms-1">(4.5)</div>
+                    </div>
+                    <a href="product-dec.html" class="fw-bold fs-15 mb-2 c-primary-hover">Fresh organic villa farm lomon 500gm pack</a>
+                    <div class="price d-flex align-items-center justify-content-center">
+                      <div class="fs-15 fw-bolder c-primary me-2">$120.25</div>
+                      <div class="descond fs-13 c-gray">$160.99</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-sm-6 mb-4 productFilter" data-content="snake">
+                <div class="product overflow-hidden position-relative p-2 border-g rounded-2 t-duration">
+                  <div class="loveProduct t-duration position-absolute d-flex align-items-center justify-content-center c-primary rounded-circle bg-gray border-g pointer">
+                    <i class="fa-thin fa-heart"></i>
+                  </div>
+                  <div class="image border-bot-g rounded-2 position-relative">
+                    <img src="img/product-9.jpg" alt="img" class="img-fluid rounded-2">
+                    <div class="overflow-hidden rounded-2 w-100 h-100 position-absolute start-0 top-0">
+                      <div class="zoomeImage position-absolute">
+                        <img src="img/product-9.jpg" alt="zoom" class="rounded-2">
+                      </div>
+                    </div>
+                    <div class="lockCart t-duration position-absolute start-50 top-100 translate-middle d-flex align-items-center justify-content-center c-primary rounded-circle bg-gray border-g pointer">
+                      <i class="fa-thin fa-lock" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="text text-center pt-4 mt-2">
+                    <div class="kind fs-13 c-gray mb-1">Snake</div>
+                    <div class="starts d-flex align-items-center justify-content-center mb-2">
+                      <i class="fa-solid fa-star star fs-13 me-1"></i>
+                      <i class="fa-solid fa-star star fs-13 me-1"></i>
+                      <i class="fa-solid fa-star star fs-13 me-1"></i>
+                      <i class="fa-solid fa-star star fs-13 me-1"></i>
+                      <i class="fa-solid fa-star star fs-13 me-1"></i>
+                      <div class="fs-13 c-gray ms-1">(5.0)</div>
+                    </div>
+                    <a href="product-dec.html" class="fw-bold fs-15 mb-2 c-primary-hover">Best snakes with hazel nut pack 200gm</a>
+                    <div class="price d-flex align-items-center justify-content-center">
+                      <div class="fs-15 fw-bolder c-primary me-2">$180.25</div>
+                      <div class="descond fs-13 c-gray">$190.99</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-sm-6 mb-4 productFilter" data-content="fruit">
+                <div class="product overflow-hidden position-relative p-2 border-g rounded-2 t-duration">
+                  <div class="loveProduct t-duration position-absolute d-flex align-items-center justify-content-center c-primary rounded-circle bg-gray border-g pointer">
+                    <i class="fa-thin fa-heart"></i>
+                  </div>
+                  <div class="image border-bot-g rounded-2 position-relative">
+                    <img src="img/product-2.jpg" alt="img" class="img-fluid rounded-2">
+                    <div class="overflow-hidden rounded-2 w-100 h-100 position-absolute start-0 top-0">
+                      <div class="zoomeImage position-absolute">
+                        <img src="img/product-2.jpg" alt="zoom" class="rounded-2">
+                      </div>
+                    </div>
+                    <div class="lockCart t-duration position-absolute start-50 top-100 translate-middle d-flex align-items-center justify-content-center c-primary rounded-circle bg-gray border-g pointer">
+                      <i class="fa-thin fa-lock" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="text text-center pt-4 mt-2">
+                    <div class="kind fs-13 c-gray mb-1">Fruits</div>
+                    <div class="starts d-flex align-items-center justify-content-center mb-2">
+                      <i class="fa-solid fa-star star fs-13 me-1"></i>
+                      <i class="fa-solid fa-star star fs-13 me-1"></i>
+                      <i class="fa-solid fa-star star fs-13 me-1"></i>
+                      <i class="fa-solid fa-star star fs-13 me-1"></i>
+                      <i class="fa-thin fa-star star fs-13 me-1"></i>
+                      <div class="fs-13 c-gray ms-1">(4.5)</div>
+                    </div>
+                    <a href="product-dec.html" class="fw-bold fs-15 mb-2 c-primary-hover">Fresh organic apple 1kg simla marming</a>
+                    <div class="price d-flex align-items-center justify-content-center">
+                      <div class="fs-15 fw-bolder c-primary me-2">$120.25</div>
+                      <div class="descond fs-13 c-gray">$160.99</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-sm-6 mb-4 productFilter" data-content="bakery">
+                <div class="product overflow-hidden position-relative p-2 border-g rounded-2 t-duration">
+                  <div class="loveProduct t-duration position-absolute d-flex align-items-center justify-content-center c-primary rounded-circle bg-gray border-g pointer">
+                    <i class="fa-thin fa-heart"></i>
+                  </div>
+                  <div class="image border-bot-g rounded-2 position-relative">
+                    <img src="img/product-17.jpg" alt="img" class="img-fluid rounded-2">
+                    <div class="overflow-hidden rounded-2 w-100 h-100 position-absolute start-0 top-0">
+                      <div class="zoomeImage position-absolute">
+                        <img src="img/product-17.jpg" alt="zoom" class="rounded-2">
+                      </div>
+                    </div>
+                    <div class="lockCart t-duration position-absolute start-50 top-100 translate-middle d-flex align-items-center justify-content-center c-primary rounded-circle bg-gray border-g pointer">
+                      <i class="fa-thin fa-lock" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="text text-center pt-4 mt-2">
+                    <div class="kind fs-13 c-gray mb-1">Bakery</div>
+                    <div class="starts d-flex align-items-center justify-content-center mb-2">
+                      <i class="fa-solid fa-star star fs-13 me-1"></i>
+                      <i class="fa-solid fa-star star fs-13 me-1"></i>
+                      <i class="fa-solid fa-star star fs-13 me-1"></i>
+                      <i class="fa-solid fa-star star fs-13 me-1"></i>
+                      <i class="fa-solid fa-star star fs-13 me-1"></i>
+                      <div class="fs-13 c-gray ms-1">(5.0)</div>
+                    </div>
+                    <a href="product-dec.html" class="fw-bold fs-15 mb-2 c-primary-hover">Delicious white baked fresh bread and toast</a>
+                    <div class="price d-flex align-items-center justify-content-center">
+                      <div class="fs-15 fw-bolder c-primary me-2">$180.25</div>
+                      <div class="descond fs-13 c-gray">$190.99</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-sm-6 mb-4 productFilter" data-content="snake">
+                <div class="product overflow-hidden position-relative p-2 border-g rounded-2 t-duration">
+                  <div class="loveProduct t-duration position-absolute d-flex align-items-center justify-content-center c-primary rounded-circle bg-gray border-g pointer">
+                    <i class="fa-thin fa-heart"></i>
+                  </div>
+                  <div class="image border-bot-g rounded-2 position-relative">
+                    <img src="img/product-11.jpg" alt="img" class="img-fluid rounded-2">
+                    <div class="overflow-hidden rounded-2 w-100 h-100 position-absolute start-0 top-0">
+                      <div class="zoomeImage position-absolute">
+                        <img src="img/product-11.jpg" alt="zoom" class="rounded-2">
+                      </div>
+                    </div>
+                    <div class="lockCart t-duration position-absolute start-50 top-100 translate-middle d-flex align-items-center justify-content-center c-primary rounded-circle bg-gray border-g pointer">
+                      <i class="fa-thin fa-lock" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="text text-center pt-4 mt-2">
+                    <div class="kind fs-13 c-gray mb-1">Snake</div>
+                    <div class="starts d-flex align-items-center justify-content-center mb-2">
+                      <i class="fa-solid fa-star star fs-13 me-1"></i>
+                      <i class="fa-solid fa-star star fs-13 me-1"></i>
+                      <i class="fa-solid fa-star star fs-13 me-1"></i>
+                      <i class="fa-solid fa-star star fs-13 me-1"></i>
+                      <i class="fa-solid fa-star star fs-13 me-1"></i>
+                      <div class="fs-13 c-gray ms-1">(5.0)</div>
+                    </div>
+                    <a href="product-dec.html" class="fw-bold fs-15 mb-2 c-primary-hover">Sweet crunchy nut mix 250gm pack</a>
+                    <div class="price d-flex align-items-center justify-content-center">
+                      <div class="fs-15 fw-bolder c-primary me-2">$180.25</div>
+                      <div class="descond fs-13 c-gray">$190.99</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-sm-6 mb-4 productFilter" data-content="fruit">
+                <div class="product overflow-hidden position-relative p-2 border-g rounded-2 t-duration">
+                  <div class="loveProduct t-duration position-absolute d-flex align-items-center justify-content-center c-primary rounded-circle bg-gray border-g pointer">
+                    <i class="fa-thin fa-heart"></i>
+                  </div>
+                  <div class="image border-bot-g rounded-2 position-relative">
+                    <img src="img/product-3.jpg" alt="img" class="img-fluid rounded-2">
+                    <div class="overflow-hidden rounded-2 w-100 h-100 position-absolute start-0 top-0">
+                      <div class="zoomeImage position-absolute">
+                        <img src="img/product-3.jpg" alt="zoom" class="rounded-2">
+                      </div>
+                    </div>
+                    <div class="lockCart t-duration position-absolute start-50 top-100 translate-middle d-flex align-items-center justify-content-center c-primary rounded-circle bg-gray border-g pointer">
+                      <i class="fa-thin fa-lock" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="text text-center pt-4 mt-2">
+                    <div class="kind fs-13 c-gray mb-1">Fruits</div>
+                    <div class="starts d-flex align-items-center justify-content-center mb-2">
+                      <i class="fa-solid fa-star star fs-13 me-1"></i>
+                      <i class="fa-solid fa-star star fs-13 me-1"></i>
+                      <i class="fa-solid fa-star star fs-13 me-1"></i>
+                      <i class="fa-thin fa-star star fs-13 me-1"></i>
+                      <i class="fa-thin fa-star star fs-13 me-1"></i>
+                      <div class="fs-13 c-gray ms-1">(3.2)</div>
+                    </div>
+                    <a href="product-dec.html" class="fw-bold fs-15 mb-2 c-primary-hover">Organic fresh venila farm watermelon 5kg</a>
+                    <div class="price d-flex align-items-center justify-content-center">
+                      <div class="fs-15 fw-bolder c-primary me-2">$120.25</div>
+                      <div class="descond fs-13 c-gray">$160.99</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-sm-6 mb-4 productFilter" data-content="snake">
+                <div class="product overflow-hidden position-relative p-2 border-g rounded-2 t-duration">
+                  <div class="loveProduct t-duration position-absolute d-flex align-items-center justify-content-center c-primary rounded-circle bg-gray border-g pointer">
+                    <i class="fa-thin fa-heart"></i>
+                  </div>
+                  <div class="image border-bot-g rounded-2 position-relative">
+                    <img src="img/product-10.jpg" alt="img" class="img-fluid rounded-2">
+                    <div class="overflow-hidden rounded-2 w-100 h-100 position-absolute start-0 top-0">
+                      <div class="zoomeImage position-absolute">
+                        <img src="img/product-10.jpg" alt="zoom" class="rounded-2">
+                      </div>
+                    </div>
+                    <div class="lockCart t-duration position-absolute start-50 top-100 translate-middle d-flex align-items-center justify-content-center c-primary rounded-circle bg-gray border-g pointer">
+                      <i class="fa-thin fa-lock" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="text text-center pt-4 mt-2">
+                    <div class="kind fs-13 c-gray mb-1">Snake</div>
+                    <div class="starts d-flex align-items-center justify-content-center mb-2">
+                      <i class="fa-solid fa-star star fs-13 me-1"></i>
+                      <i class="fa-solid fa-star star fs-13 me-1"></i>
+                      <i class="fa-solid fa-star star fs-13 me-1"></i>
+                      <i class="fa-solid fa-star star fs-13 me-1"></i>
+                      <i class="fa-solid fa-star star fs-13 me-1"></i>
+                      <div class="fs-13 c-gray ms-1">(5.0)</div>
+                    </div>
+                    <a href="product-dec.html" class="fw-bold fs-15 mb-2 c-primary-hover">Sweet crunchy nut mix 250gm pack</a>
+                    <div class="price d-flex align-items-center justify-content-center">
+                      <div class="fs-15 fw-bolder c-primary me-2">$180.25</div>
+                      <div class="descond fs-13 c-gray">$190.99</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-sm-6 mb-4 productFilter" data-content="fruit">
+                <div class="product overflow-hidden position-relative p-2 border-g rounded-2 t-duration">
+                  <div class="loveProduct t-duration position-absolute d-flex align-items-center justify-content-center c-primary rounded-circle bg-gray border-g pointer">
+                    <i class="fa-thin fa-heart"></i>
+                  </div>
+                  <div class="image border-bot-g rounded-2 position-relative">
+                    <img src="img/product-4.jpg" alt="img" class="img-fluid rounded-2">
+                    <div class="overflow-hidden rounded-2 w-100 h-100 position-absolute start-0 top-0">
+                      <div class="zoomeImage position-absolute">
+                        <img src="img/product-4.jpg" alt="zoom" class="rounded-2">
+                      </div>
+                    </div>
+                    <div class="lockCart t-duration position-absolute start-50 top-100 translate-middle d-flex align-items-center justify-content-center c-primary rounded-circle bg-gray border-g pointer">
+                      <i class="fa-thin fa-lock" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="text text-center pt-4 mt-2">
+                    <div class="kind fs-13 c-gray mb-1">Fruits</div>
+                    <div class="starts d-flex align-items-center justify-content-center mb-2">
+                      <i class="fa-solid fa-star star fs-13 me-1"></i>
+                      <i class="fa-solid fa-star star fs-13 me-1"></i>
+                      <i class="fa-solid fa-star star fs-13 me-1"></i>
+                      <i class="fa-thin fa-star star fs-13 me-1"></i>
+                      <i class="fa-thin fa-star star fs-13 me-1"></i>
+                      <div class="fs-13 c-gray ms-1">(3.2)</div>
+                    </div>
+                    <a href="product-dec.html" class="fw-bold fs-15 mb-2 c-primary-hover">Organic fresh venila farm watermelon 5kg</a>
+                    <div class="price d-flex align-items-center justify-content-center">
+                      <div class="fs-15 fw-bolder c-primary me-2">$120.25</div>
+                      <div class="descond fs-13 c-gray">$160.99</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-sm-6 mb-4 productFilter" data-content="snake">
+                <div class="product overflow-hidden position-relative p-2 border-g rounded-2 t-duration">
+                  <div class="loveProduct t-duration position-absolute d-flex align-items-center justify-content-center c-primary rounded-circle bg-gray border-g pointer">
+                    <i class="fa-thin fa-heart"></i>
+                  </div>
+                  <div class="image border-bot-g rounded-2 position-relative">
+                    <img src="img/product-11.jpg" alt="img" class="img-fluid rounded-2">
+                    <div class="overflow-hidden rounded-2 w-100 h-100 position-absolute start-0 top-0">
+                      <div class="zoomeImage position-absolute">
+                        <img src="img/product-11.jpg" alt="zoom" class="rounded-2">
+                      </div>
+                    </div>
+                    <div class="lockCart t-duration position-absolute start-50 top-100 translate-middle d-flex align-items-center justify-content-center c-primary rounded-circle bg-gray border-g pointer">
+                      <i class="fa-thin fa-lock" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="text text-center pt-4 mt-2">
+                    <div class="kind fs-13 c-gray mb-1">Snake</div>
+                    <div class="starts d-flex align-items-center justify-content-center mb-2">
+                      <i class="fa-solid fa-star star fs-13 me-1"></i>
+                      <i class="fa-solid fa-star star fs-13 me-1"></i>
+                      <i class="fa-solid fa-star star fs-13 me-1"></i>
+                      <i class="fa-solid fa-star star fs-13 me-1"></i>
+                      <i class="fa-solid fa-star star fs-13 me-1"></i>
+                      <div class="fs-13 c-gray ms-1">(5.0)</div>
+                    </div>
+                    <a href="product-dec.html" class="fw-bold fs-15 mb-2 c-primary-hover">Sweet crunchy nut mix 250gm pack</a>
+                    <div class="price d-flex align-items-center justify-content-center">
+                      <div class="fs-15 fw-bolder c-primary me-2">$180.25</div>
+                      <div class="descond fs-13 c-gray">$190.99</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-sm-6 mb-4 productFilter" data-content="fruit">
+                <div class="product overflow-hidden position-relative p-2 border-g rounded-2 t-duration">
+                  <div class="loveProduct t-duration position-absolute d-flex align-items-center justify-content-center c-primary rounded-circle bg-gray border-g pointer">
+                    <i class="fa-thin fa-heart"></i>
+                  </div>
+                  <div class="image border-bot-g rounded-2 position-relative">
+                    <img src="img/product-3.jpg" alt="img" class="img-fluid rounded-2">
+                    <div class="overflow-hidden rounded-2 w-100 h-100 position-absolute start-0 top-0">
+                      <div class="zoomeImage position-absolute">
+                        <img src="img/product-3.jpg" alt="zoom" class="rounded-2">
+                      </div>
+                    </div>
+                    <div class="lockCart t-duration position-absolute start-50 top-100 translate-middle d-flex align-items-center justify-content-center c-primary rounded-circle bg-gray border-g pointer">
+                      <i class="fa-thin fa-lock" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="text text-center pt-4 mt-2">
+                    <div class="kind fs-13 c-gray mb-1">Fruits</div>
+                    <div class="starts d-flex align-items-center justify-content-center mb-2">
+                      <i class="fa-solid fa-star star fs-13 me-1"></i>
+                      <i class="fa-solid fa-star star fs-13 me-1"></i>
+                      <i class="fa-solid fa-star star fs-13 me-1"></i>
+                      <i class="fa-thin fa-star star fs-13 me-1"></i>
+                      <i class="fa-thin fa-star star fs-13 me-1"></i>
+                      <div class="fs-13 c-gray ms-1">(3.2)</div>
+                    </div>
+                    <a href="product-dec.html" class="fw-bold fs-15 mb-2 c-primary-hover">Organic fresh venila farm watermelon 5kg</a>
+                    <div class="price d-flex align-items-center justify-content-center">
+                      <div class="fs-15 fw-bolder c-primary me-2">$120.25</div>
+                      <div class="descond fs-13 c-gray">$160.99</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Popular Products -->
+    <!-- Start Product Banner -->
+    <div class="product-banners position-relative py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-sm-6 mb-4">
+            <div class="product-banner position-relative overflow-hidden rounded-2">
+              <img src="img/data-1.jpg" alt="" class="w-100 h-100 position-absolute left-0 top-0 obj-cover rounded-2">
+              <div class="text position-relative p-4">
+                <h5>Healthy <br> Bakery Products</h5>
+                <div class="d-flex align-items-center mb-2">
+                  <span class="lead c-primary fw-bolder me-2">30%</span>
+                  <div class="c-gray fs-13">off on first order</div>
+                </div>
+                <div class="main-button">Shope Now</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-6 mb-4">
+            <div class="product-banner position-relative overflow-hidden rounded-2">
+              <img src="img/data-2.jpg" alt="" class="w-100 h-100 position-absolute left-0 top-0 obj-cover rounded-2">
+              <div class="text position-relative p-4">
+                <h5>Fresh <br>Snacks & Sweets</h5>
+                <div class="d-flex align-items-center mb-2">
+                  <span class="lead c-primary fw-bolder me-2">35%</span>
+                  <div class="c-gray fs-13">off on first order</div>
+                </div>
+                <div class="main-button">Shope Now</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-6 mb-4">
+            <div class="product-banner position-relative overflow-hidden rounded-2">
+              <img src="img/data-3.jpg" alt="" class="w-100 h-100 position-absolute left-0 top-0 obj-cover rounded-2">
+              <div class="text position-relative p-4">
+                <h5>Fresh & healthy <br> Organic Fruits</h5>
+                <div class="d-flex align-items-center mb-2">
+                  <span class="lead c-primary fw-bolder me-2">20%</span>
+                  <div class="c-gray fs-13">off on first order</div>
+                </div>
+                <div class="main-button">Shope Now</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Product Banner -->
+    <!-- Start Services -->
+    <div class="services position-relative py-5">
+      <div class="container">
+        <div class="row position-relative">
+          <div class="col-lg-3 col-sm-6 text-center mb-4 mb-lg-0">
+            <div class="box bg-gray p-4 border-g rounded-2">
+              <div class="icon mb-2">
+                <i class="fa-thin fa-inbox display-5 c-primary" aria-hidden="true"></i>
+              </div>
+              <div class="fw-bold fs-15 text-capitalize mb-2">Product Packing</div>
+              <p class="c-gray fs-13 m-0">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 text-center mb-4 mb-lg-0">
+            <div class="box bg-gray p-4 border-g rounded-2">
+              <div class="icon mb-2">
+                <i class="fa-thin fa-headphones display-5 c-primary" aria-hidden="true"></i>
+              </div>
+              <div class="fw-bold fs-15 text-capitalize mb-2">24X7 Support</div>
+              <p class="c-gray fs-13 m-0">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 text-center mb-4 mb-lg-0">
+            <div class="box bg-gray p-4 border-g rounded-2">
+              <div class="icon mb-2">
+                <i class="fa-thin fa-truck display-5 c-primary" aria-hidden="true"></i>
+              </div>
+              <div class="fw-bold fs-15 text-capitalize mb-2">Deliver in 5 days</div>
+              <p class="c-gray fs-13 m-0">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 text-center mb-4 mb-lg-0">
+            <div class="box bg-gray p-4 border-g rounded-2">
+              <div class="icon mb-2">
+                <i class="fa-thin fa-dollar display-5 c-primary"></i>
+              </div>
+              <div class="fw-bold fs-15 text-capitalize mb-2">Payment secure</div>
+              <p class="c-gray fs-13 m-0">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Services -->
+    <!-- Start Great Deal -->
+    <div class="greatdeal my-5">
+      <div class="container d-flex align-items-center">
+        <div class="deal p-5">
+          <div class="d-flex align-items-center mb-2">
+            <span class="lead c-primary fw-bolder me-2">35%</span>
+            OFF
+          </div>
+          <h4 class="mb-2">Great deal on organic food.</h4>
+          <div class="c-gray fs-15 mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do maecenas accumsan lacus vel facilisis.</div>
+          <div class="time d-flex align-items-center rounded-2 px-3 py-2 flex-wrap">
+            <div class="box text-center">
+              <div class="days count lead fw-bolder">0</div>
+              <div class="c-gray fs-15">Days</div>
+            </div>
+            <i class="fa-solid fa-colon c-gray mx-3"></i>
+            <div class="box text-center">
+              <div class="hours count lead fw-bolder">0</div>
+              <div class="c-gray fs-15">Hrs</div>
+            </div>
+            <i class="fa-solid fa-colon c-gray mx-3"></i>
+            <div class="box text-center">
+              <div class="minutes count lead fw-bolder">0</div>
+              <div class="c-gray fs-15">Min</div>
+            </div>
+            <i class="fa-solid fa-colon c-gray mx-3"></i>
+            <div class="box text-center">
+              <div class="seconds count lead fw-bolder">0</div>
+              <div class="c-gray fs-15">Sec</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Great Deal -->
+    <!-- Start Review -->
+    <div class="review overflow-hidden py-5 position-relative">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7 mb-4 mb-lg-0">
+            <div class="owl-carousel owl-review owl-theme">
+              <div class="item">
+                <div class="product overflow-hidden position-relative p-2 border-g rounded-2 t-duration">
+                  <div class="loveProduct t-duration position-absolute d-flex align-items-center justify-content-center c-primary rounded-circle bg-gray border-g pointer">
+                    <i class="fa-thin fa-heart"></i>
+                  </div>
+                  <div class="image border-bot-g rounded-2 position-relative">
+                    <img src="img/product-1.jpg" alt="img" class="img-fluid rounded-2">
+                    <div class="overflow-hidden rounded-2 w-100 h-100 position-absolute start-0 top-0">
+                      <div class="zoomeImage position-absolute">
+                        <img src="img/product-1.jpg" alt="zoom" class="rounded-2">
+                      </div>
+                    </div>
+                    <div class="lockCart t-duration position-absolute start-50 top-100 translate-middle d-flex align-items-center justify-content-center c-primary rounded-circle bg-gray border-g pointer">
+                      <i class="fa-thin fa-lock" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="text text-center pt-4 mt-2">
+                    <div class="kind fs-13 c-gray mb-1">Vegetable</div>
+                    <div class="starts d-flex align-items-center justify-content-center mb-2">
+                      <i class="fa-solid fa-star star fs-13 me-1"></i>
+                      <i class="fa-solid fa-star star fs-13 me-1"></i>
+                      <i class="fa-solid fa-star star fs-13 me-1"></i>
+                      <i class="fa-solid fa-star star fs-13 me-1"></i>
+                      <i class="fa-thin fa-star star fs-13 me-1"></i>
+                      <div class="fs-13 c-gray ms-1">(4.5)</div>
+                    </div>
+                    <a href="product-dec.html" class="fw-bold fs-15 mb-2 c-primary-hover">Fresh organic villa farm lomon 500gm pack</a>
+                    <div class="price d-flex align-items-center justify-content-center">
+                      <div class="fs-15 fw-bolder c-primary me-2">$120.25</div>
+                      <div class="descond fs-13 c-gray">$160.99</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="product overflow-hidden position-relative p-2 border-g rounded-2 t-duration">
+                  <div class="loveProduct t-duration position-absolute d-flex align-items-center justify-content-center c-primary rounded-circle bg-gray border-g pointer">
+                    <i class="fa-thin fa-heart"></i>
+                  </div>
+                  <div class="image border-bot-g rounded-2 position-relative">
+                    <img src="img/product-17.jpg" alt="img" class="img-fluid rounded-2">
+                    <div class="overflow-hidden rounded-2 w-100 h-100 position-absolute start-0 top-0">
+                      <div class="zoomeImage position-absolute">
+                        <img src="img/product-17.jpg" alt="zoom" class="rounded-2">
+                      </div>
+                    </div>
+                    <div class="lockCart t-duration position-absolute start-50 top-100 translate-middle d-flex align-items-center justify-content-center c-primary rounded-circle bg-gray border-g pointer">
+                      <i class="fa-thin fa-lock" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="text text-center pt-4 mt-2">
+                    <div class="kind fs-13 c-gray mb-1">Bakery</div>
+                    <div class="starts d-flex align-items-center justify-content-center mb-2">
+                      <i class="fa-solid fa-star star fs-13 me-1"></i>
+                      <i class="fa-solid fa-star star fs-13 me-1"></i>
+                      <i class="fa-solid fa-star star fs-13 me-1"></i>
+                      <i class="fa-solid fa-star star fs-13 me-1"></i>
+                      <i class="fa-solid fa-star star fs-13 me-1"></i>
+                      <div class="fs-13 c-gray ms-1">(5.0)</div>
+                    </div>
+                    <a href="product-dec.html" class="fw-bold fs-15 mb-2 c-primary-hover">Delicious white baked fresh bread and toast</a>
+                    <div class="price d-flex align-items-center justify-content-center">
+                      <div class="fs-15 fw-bolder c-primary me-2">$180.25</div>
+                      <div class="descond fs-13 c-gray">$190.99</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="product overflow-hidden position-relative p-2 border-g rounded-2 t-duration">
+                  <div class="loveProduct t-duration position-absolute d-flex align-items-center justify-content-center c-primary rounded-circle bg-gray border-g pointer">
+                    <i class="fa-thin fa-heart"></i>
+                  </div>
+                  <div class="image border-bot-g rounded-2 position-relative">
+                    <img src="img/product-2.jpg" alt="img" class="img-fluid rounded-2">
+                    <div class="overflow-hidden rounded-2 w-100 h-100 position-absolute start-0 top-0">
+                      <div class="zoomeImage position-absolute">
+                        <img src="img/product-2.jpg" alt="zoom" class="rounded-2">
+                      </div>
+                    </div>
+                    <div class="lockCart t-duration position-absolute start-50 top-100 translate-middle d-flex align-items-center justify-content-center c-primary rounded-circle bg-gray border-g pointer">
+                      <i class="fa-thin fa-lock" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="text text-center pt-4 mt-2">
+                    <div class="kind fs-13 c-gray mb-1">Fruits</div>
+                    <div class="starts d-flex align-items-center justify-content-center mb-2">
+                      <i class="fa-solid fa-star star fs-13 me-1"></i>
+                      <i class="fa-solid fa-star star fs-13 me-1"></i>
+                      <i class="fa-solid fa-star star fs-13 me-1"></i>
+                      <i class="fa-solid fa-star star fs-13 me-1"></i>
+                      <i class="fa-thin fa-star star fs-13 me-1"></i>
+                      <div class="fs-13 c-gray ms-1">(4.5)</div>
+                    </div>
+                    <a href="product-dec.html" class="fw-bold fs-15 mb-2 c-primary-hover">Fresh organic apple 1kg simla marming</a>
+                    <div class="price d-flex align-items-center justify-content-center">
+                      <div class="fs-15 fw-bolder c-primary me-2">$120.25</div>
+                      <div class="descond fs-13 c-gray">$160.99</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="product overflow-hidden position-relative p-2 border-g rounded-2 t-duration">
+                  <div class="loveProduct t-duration position-absolute d-flex align-items-center justify-content-center c-primary rounded-circle bg-gray border-g pointer">
+                    <i class="fa-thin fa-heart"></i>
+                  </div>
+                  <div class="image border-bot-g rounded-2 position-relative">
+                    <img src="img/product-9.jpg" alt="img" class="img-fluid rounded-2">
+                    <div class="overflow-hidden rounded-2 w-100 h-100 position-absolute start-0 top-0">
+                      <div class="zoomeImage position-absolute">
+                        <img src="img/product-9.jpg" alt="zoom" class="rounded-2">
+                      </div>
+                    </div>
+                    <div class="lockCart t-duration position-absolute start-50 top-100 translate-middle d-flex align-items-center justify-content-center c-primary rounded-circle bg-gray border-g pointer">
+                      <i class="fa-thin fa-lock" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="text text-center pt-4 mt-2">
+                    <div class="kind fs-13 c-gray mb-1">Snake</div>
+                    <div class="starts d-flex align-items-center justify-content-center mb-2">
+                      <i class="fa-solid fa-star star fs-13 me-1"></i>
+                      <i class="fa-solid fa-star star fs-13 me-1"></i>
+                      <i class="fa-solid fa-star star fs-13 me-1"></i>
+                      <i class="fa-solid fa-star star fs-13 me-1"></i>
+                      <i class="fa-solid fa-star star fs-13 me-1"></i>
+                      <div class="fs-13 c-gray ms-1">(5.0)</div>
+                    </div>
+                    <a href="product-dec.html" class="fw-bold fs-15 mb-2 c-primary-hover">Best snakes with hazel nut pack 200gm</a>
+                    <div class="price d-flex align-items-center justify-content-center">
+                      <div class="fs-15 fw-bolder c-primary me-2">$180.25</div>
+                      <div class="descond fs-13 c-gray">$190.99</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="box position-relative overflow-hidden rounded-2 py-5 px-3 h-100 align-items-center d-flex">
+              <img src="img/products-rightview.jpg" alt="img" class="w-100 h-100 position-absolute start-0 top-0 obj-cover" style="filter: brightness(1.1);">
+              <div class="text position-relative">
+                <h3 class="fw-bolder mb-2">Organic & Healthy <br/> Vegetables</h3>
+                <div class="d-flex align-items-center mb-2">
+                  <span class="lead c-primary fw-bolder me-2">25%</span>
+                  OFF
+                </div>
+                <div class="main-button">Shope Now</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Review -->
+    <!-- Start Great Works -->
+    <div class="great-work overflow-hidden py-5 position-relative">
+      <div class="container">
+        <div class="text-center section-heading mx-auto mb-4">
+          <h2 class="fw-bolder mb-2">Great Words From People</h2>
+          <div class="c-gray fs-13">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore lacus vel facilisis.</div>
+        </div>
+        <div class="owl-custmers owl-carousel owl-theme">
+          <div class="item">
+            <div class="box bg-gray p-4 text-center rounded-2">
+              <div class="circle-item rounded-circle mx-auto mb-4">
+                <img src="img/greate-1.jpg" alt="img" class="w-100 h-100 rounded-circle obj-cover">
+              </div>
+              <div class="c-gray fs-13 mb-2">Front-end Dev</div>
+              <p class="fw-bolder lead mb-2">Son Salem</p>
+              <p class="c-gray fs-13 mb-2">“eiusmpsu dolor sit amet, conse cte tur ng elit, sed do eiusmod tem lacus velfacilisis.”</p>
+              <div class="starts d-flex align-items-center justify-content-center mb-2">
+                <i class="fa-solid fa-star star fs-13 me-1"></i>
+                <i class="fa-solid fa-star star fs-13 me-1"></i>
+                <i class="fa-solid fa-star star fs-13 me-1"></i>
+                <i class="fa-solid fa-star star fs-13 me-1"></i>
+                <i class="fa-solid fa-star star fs-13 me-1"></i>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="box bg-gray p-4 text-center rounded-2">
+              <div class="circle-item rounded-circle mx-auto mb-4">
+                <img src="img/greate-2.png" alt="img" class="w-100 h-100 rounded-circle obj-cover">
+              </div>
+              <div class="c-gray fs-13 mb-2">Back-end Dev</div>
+              <p class="fw-bolder lead mb-2">Son Salem</p>
+              <p class="c-gray fs-13 mb-2">“eiusmpsu dolor sit amet, conse cte tur ng elit, sed do eiusmod tem lacus velfacilisis.”</p>
+              <div class="starts d-flex align-items-center justify-content-center mb-2">
+                <i class="fa-solid fa-star star fs-13 me-1"></i>
+                <i class="fa-solid fa-star star fs-13 me-1"></i>
+                <i class="fa-solid fa-star star fs-13 me-1"></i>
+                <i class="fa-solid fa-star star fs-13 me-1"></i>
+                <i class="fa-solid fa-star star fs-13 me-1"></i>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="box bg-gray p-4 text-center rounded-2">
+              <div class="circle-item rounded-circle mx-auto mb-4">
+                <img src="img/greate-3.png" alt="img" class="w-100 h-100 rounded-circle obj-cover">
+              </div>
+              <div class="c-gray fs-13 mb-2">Full Stack Dev</div>
+              <p class="fw-bolder lead mb-2">Son Salem</p>
+              <p class="c-gray fs-13 mb-2">“eiusmpsu dolor sit amet, conse cte tur ng elit, sed do eiusmod tem lacus velfacilisis.”</p>
+              <div class="starts d-flex align-items-center justify-content-center mb-2">
+                <i class="fa-solid fa-star star fs-13 me-1"></i>
+                <i class="fa-solid fa-star star fs-13 me-1"></i>
+                <i class="fa-solid fa-star star fs-13 me-1"></i>
+                <i class="fa-solid fa-star star fs-13 me-1"></i>
+                <i class="fa-solid fa-star star fs-13 me-1"></i>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="box bg-gray p-4 text-center rounded-2">
+              <div class="circle-item rounded-circle mx-auto mb-4">
+                <img src="img/greate-1.jpg" alt="img" class="w-100 h-100 rounded-circle obj-cover">
+              </div>
+              <div class="c-gray fs-13 mb-2">Front-end Dev</div>
+              <p class="fw-bolder lead mb-2">Son Salem</p>
+              <p class="c-gray fs-13 mb-2">“eiusmpsu dolor sit amet, conse cte tur ng elit, sed do eiusmod tem lacus velfacilisis.”</p>
+              <div class="starts d-flex align-items-center justify-content-center mb-2">
+                <i class="fa-solid fa-star star fs-13 me-1"></i>
+                <i class="fa-solid fa-star star fs-13 me-1"></i>
+                <i class="fa-solid fa-star star fs-13 me-1"></i>
+                <i class="fa-solid fa-star star fs-13 me-1"></i>
+                <i class="fa-solid fa-star star fs-13 me-1"></i>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="box bg-gray p-4 text-center rounded-2">
+              <div class="circle-item rounded-circle mx-auto mb-4">
+                <img src="img/greate-2.png" alt="img" class="w-100 h-100 rounded-circle obj-cover">
+              </div>
+              <div class="c-gray fs-13 mb-2">Back-end Dev</div>
+              <p class="fw-bolder lead mb-2">Son Salem</p>
+              <p class="c-gray fs-13 mb-2">“eiusmpsu dolor sit amet, conse cte tur ng elit, sed do eiusmod tem lacus velfacilisis.”</p>
+              <div class="starts d-flex align-items-center justify-content-center mb-2">
+                <i class="fa-solid fa-star star fs-13 me-1"></i>
+                <i class="fa-solid fa-star star fs-13 me-1"></i>
+                <i class="fa-solid fa-star star fs-13 me-1"></i>
+                <i class="fa-solid fa-star star fs-13 me-1"></i>
+                <i class="fa-solid fa-star star fs-13 me-1"></i>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="box bg-gray p-4 text-center rounded-2">
+              <div class="circle-item rounded-circle mx-auto mb-4">
+                <img src="img/greate-3.png" alt="img" class="w-100 h-100 rounded-circle obj-cover">
+              </div>
+              <div class="c-gray fs-13 mb-2">Full Stack Dev</div>
+              <p class="fw-bolder lead mb-2">Son Salem</p>
+              <p class="c-gray fs-13 mb-2">“eiusmpsu dolor sit amet, conse cte tur ng elit, sed do eiusmod tem lacus velfacilisis.”</p>
+              <div class="starts d-flex align-items-center justify-content-center mb-2">
+                <i class="fa-solid fa-star star fs-13 me-1"></i>
+                <i class="fa-solid fa-star star fs-13 me-1"></i>
+                <i class="fa-solid fa-star star fs-13 me-1"></i>
+                <i class="fa-solid fa-star star fs-13 me-1"></i>
+                <i class="fa-solid fa-star star fs-13 me-1"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Great Works -->
+    <!-- Start News -->
+    <div class="news overflow-hidden py-5 position-relative">
+      <div class="container position-relative">
+        <div class="text-center section-heading mx-auto mb-4">
+          <h2 class="fw-bolder mb-2">Latest News</h2>
+          <div class="c-gray fs-13">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore lacus vel facilisis.</div>
+        </div>
+        <div class="owl-custmers owl-carousel owl-theme">
+          <div class="item">
+            <div class="text border-g p-4 rounded-top">
+              <div class="c-gray mb-3">By Admin | Snacks</div>
+              <h4 class="fw-bold mb-3">Urna pretium elit mauris cursus at elit Vestibulum.</h4>
+              <a href="#" class="d-flex c-primary justify-content-between">
+                <div class="fs-15 fw-bold">Read More</div>
+                <div class="icon ms-4">
+                  <i class="fa-solid fa-arrow-right fs-15"></i>
+                </div>
+              </a>
+            </div>
+            <div class="imgae position-relative overflow-hidden rounded-bottom">
+              <img src="img/blog-1.jpg" alt="img" class="img-fluid">
+              <div class="date-realse rounded-2 d-flex flex-column align-items-center position-absolute text-light">
+                <span class="fw-bolder fs-15">10</span>
+                <span class="fs-13">oct</span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="text border-g p-4 rounded-top">
+              <div class="c-gray mb-3">By Admin | Vegetable</div>
+              <h4 class="fw-bold mb-3">Urna pretium elit mauris cursus at elit Vestibulum.</h4>
+              <a href="#" class="d-flex c-primary justify-content-between">
+                <div class="fs-15 fw-bold">Read More</div>
+                <div class="icon ms-4">
+                  <i class="fa-solid fa-arrow-right fs-15"></i>
+                </div>
+              </a>
+            </div>
+            <div class="imgae position-relative overflow-hidden rounded-bottom">
+              <img src="img/blog-2.jpg" alt="img" class="img-fluid">
+              <div class="date-realse rounded-2 d-flex flex-column align-items-center position-absolute text-light">
+                <span class="fw-bolder fs-15">10</span>
+                <span class="fs-13">oct</span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="text border-g p-4 rounded-top">
+              <div class="c-gray mb-3">By Admin | Snacks</div>
+              <h4 class="fw-bold mb-3">Urna pretium elit mauris cursus at elit Vestibulum.</h4>
+              <a href="#" class="d-flex c-primary justify-content-between">
+                <div class="fs-15 fw-bold">Read More</div>
+                <div class="icon ms-4">
+                  <i class="fa-solid fa-arrow-right fs-15"></i>
+                </div>
+              </a>
+            </div>
+            <div class="imgae position-relative overflow-hidden rounded-bottom">
+              <img src="img/blog-3.jpg" alt="img" class="img-fluid">
+              <div class="date-realse rounded-2 d-flex flex-column align-items-center position-absolute text-light">
+                <span class="fw-bolder fs-15">10</span>
+                <span class="fs-13">oct</span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="text border-g p-4 rounded-top">
+              <div class="c-gray mb-3">By Admin | Snacks</div>
+              <h4 class="fw-bold mb-3">Urna pretium elit mauris cursus at elit Vestibulum.</h4>
+              <a href="#" class="d-flex c-primary justify-content-between">
+                <div class="fs-15 fw-bold">Read More</div>
+                <div class="icon ms-4">
+                  <i class="fa-solid fa-arrow-right fs-15"></i>
+                </div>
+              </a>
+            </div>
+            <div class="imgae position-relative overflow-hidden rounded-bottom">
+              <img src="img/blog-1.jpg" alt="img" class="img-fluid">
+              <div class="date-realse rounded-2 d-flex flex-column align-items-center position-absolute text-light">
+                <span class="fw-bolder fs-15">10</span>
+                <span class="fs-13">oct</span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="text border-g p-4 rounded-top">
+              <div class="c-gray mb-3">By Admin | Vegetable</div>
+              <h4 class="fw-bold mb-3">Urna pretium elit mauris cursus at elit Vestibulum.</h4>
+              <a href="#" class="d-flex c-primary justify-content-between">
+                <div class="fs-15 fw-bold">Read More</div>
+                <div class="icon ms-4">
+                  <i class="fa-solid fa-arrow-right fs-15"></i>
+                </div>
+              </a>
+            </div>
+            <div class="imgae position-relative overflow-hidden rounded-bottom">
+              <img src="img/blog-2.jpg" alt="img" class="img-fluid">
+              <div class="date-realse rounded-2 d-flex flex-column align-items-center position-absolute text-light">
+                <span class="fw-bolder fs-15">10</span>
+                <span class="fs-13">oct</span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="text border-g p-4 rounded-top">
+              <div class="c-gray mb-3">By Admin | Snacks</div>
+              <h4 class="fw-bold mb-3">Urna pretium elit mauris cursus at elit Vestibulum.</h4>
+              <a href="#" class="d-flex c-primary justify-content-between">
+                <div class="fs-15 fw-bold">Read More</div>
+                <div class="icon ms-4">
+                  <i class="fa-solid fa-arrow-right fs-15"></i>
+                </div>
+              </a>
+            </div>
+            <div class="imgae position-relative overflow-hidden rounded-bottom">
+              <img src="img/blog-3.jpg" alt="img" class="img-fluid">
+              <div class="date-realse rounded-2 d-flex flex-column align-items-center position-absolute text-light">
+                <span class="fw-bolder fs-15">10</span>
+                <span class="fs-13">oct</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Start News -->
+    <!-- Start Footer -->
+    <footer class="overflow-hidden pt-5 position-relative mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="logo mb-3">
+              <a href="index.html">
+                <img src="img/logo.png" alt="logo" class="logoSite">
+              </a>
+            </div>
+            <div class="c-gray fs-15 mb-4">Carrot is the biggest market of grocery products. Get your daily needs from our store.</div>
+            <div class="d-flex align-items-center mb-3">
+              <div class="icon me-3 c-primary">
+                <i class="fa-thin fa-location-dot"></i>
+              </div>
+              <a href="mailto:salemmamdouh77777@gmail.com" class="c-primary-hover c-gray t-duration fs-15">51 Green St.Huntington ohaio beach ontario, NY 11746 KY 4783, USA.</a>
+            </div>
+            <div class="d-flex align-items-center mb-3">
+              <div class="icon me-2 c-primary">
+                <i class="fa-brands fa-google"></i>
+              </div>
+              <a href="mailto:salemmamdouh77777@gmail.com" class="c-primary-hover c-gray t-duration fs-15">salemmamdouh77777@gmail.com</a>
+            </div>
+            <div class="d-flex align-items-center mb-3">
+              <div class="icon me-2 c-primary">
+                <i class="fa-thin fa-phone"></i>
+              </div>
+              <a href="https://wa.me/201556617801" class="c-primary-hover c-gray t-duration fs-15">+20 1556 617 801</a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6 mb-4">
+            <div class="mb-3 fw-bold">Company</div>
+            <ul>
+              <li><a href="#" class="c-gray fs-15 c-primary-hover mb-2 t-duration">Gaming</a></li>
+              <li><a href="#" class="c-gray fs-15 c-primary-hover mb-2 t-duration">Product</a></li>
+              <li><a href="#" class="c-gray fs-15 c-primary-hover mb-2 t-duration">All NFTs</a></li>
+              <li><a href="#" class="c-gray fs-15 c-primary-hover mb-2 t-duration">Social Network</a></li>
+              <li><a href="#" class="c-gray fs-15 c-primary-hover mb-2 t-duration">Domain Names</a></li>
+              <li><a href="#" class="c-gray fs-15 c-primary-hover mb-2 t-duration">Collectibles</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-6 mb-4">
+            <div class="mb-3 fw-bold">Category</div>
+            <ul>
+              <li><a href="#" class="c-gray fs-15 c-primary-hover mb-2 t-duration">Dairy & Bakery</a></li>
+              <li><a href="#" class="c-gray fs-15 c-primary-hover mb-2 t-duration">Fruits & Vegetable</a></li>
+              <li><a href="#" class="c-gray fs-15 c-primary-hover mb-2 t-duration">Snack & Spice</a></li>
+              <li><a href="#" class="c-gray fs-15 c-primary-hover mb-2 t-duration">Juice & Drinks</a></li>
+              <li><a href="#" class="c-gray fs-15 c-primary-hover mb-2 t-duration">Chicken & Meat</a></li>
+              <li><a href="#" class="c-gray fs-15 c-primary-hover mb-2 t-duration">Fast Food</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="mb-3 fw-bold">Subscribe Our Newsletter</div>
+            <div class="search position-relative mb-3">
+              <input type="text" class="w-100 border-g rounded-2 p-2 pe-5" placeholder="Search here...">
+            </div>
+            <ul class="links d-flex gap-10 align-items-center gap mb-4" style="--gap:10px">
+              <a href="https://www.facebook.com/profile.php?id=61553863762148">
+                <img src="img/FaceBook.png" alt="image">
+              </a>
+              <a href="https://www.instagram.com/salemmamdouh77/">
+                <img src="img/insta.webp" alt="image">
+              </a>
+              <a href="https://wa.me/201556617801">
+                <img src="img/Whatsapp.png" alt="image">
+              </a>
+              <a href="mailto:salemmamdouh77777@gmail.com">
+                <img src="img/Google.png" alt="image">
+              </a>
+              <a href="https://github.com/sonsalem">
+                <img src="img/github.png" alt="image">
+              </a>
+            </ul>
+            <div class="d-flex gap" style="--gap:10px">
+              <div class="insta-review position-relative rounded-3 pointer overflow-hidden">
+                <img src="img/insta-1.jpg" alt="ims" class="w-100 h-100 obj-cover">
+                <div class="over d-flex align-items-center justify-content-center position-absolute top-0 start-0 w-100 h-100 text-light t-duration">
+                  <i class="fa-brands fa-instagram"></i>
+                </div>
+              </div>
+              <div class="insta-review position-relative rounded-3 pointer overflow-hidden">
+                <img src="img/insta-2.jpg" alt="ims" class="w-100 h-100 obj-cover">
+                <div class="over d-flex align-items-center justify-content-center position-absolute top-0 start-0 w-100 h-100 text-light t-duration">
+                  <i class="fa-brands fa-instagram"></i>
+                </div>
+              </div>
+              <div class="insta-review position-relative rounded-3 pointer overflow-hidden">
+                <img src="img/insta-3.jpg" alt="ims" class="w-100 h-100 obj-cover">
+                <div class="over d-flex align-items-center justify-content-center position-absolute top-0 start-0 w-100 h-100 text-light t-duration">
+                  <i class="fa-brands fa-instagram"></i>
+                </div>
+              </div>
+              <div class="insta-review position-relative rounded-3 pointer overflow-hidden">
+                <img src="img/insta-4.jpg" alt="ims" class="w-100 h-100 obj-cover">
+                <div class="over d-flex align-items-center justify-content-center position-absolute top-0 start-0 w-100 h-100 text-light t-duration">
+                  <i class="fa-brands fa-instagram"></i>
+                </div>
+              </div>
+              <div class="insta-review position-relative rounded-3 pointer overflow-hidden">
+                <img src="img/insta-5.jpg" alt="ims" class="w-100 h-100 obj-cover">
+                <div class="over d-flex align-items-center justify-content-center position-absolute top-0 start-0 w-100 h-100 text-light t-duration">
+                  <i class="fa-brands fa-instagram"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyr py-4">
+        <div class="container d-flex justify-content-center align-items-center">
+          <div class="c-gray">© Copyright <span class="staticYear">0</span> - <span class="c-primary">Carrot</span> by <span class="c-primary">SonSalem</span></div>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
+    <!-- Start Aside Tools -->
+    <div class="overlay"></div>
+    <div class="openTools position-fixed end-0 d-flex align-items-center justify-content-center rounded-2 pointer">
+      <i class="fa-thin fa-gear lead text-light"></i>
+    </div>
+    <div class="asidetools fixed-top end-0">
+      <div class="d-flex align-items-center justify-content-between border-bot-g p-3">
+        <div class="heading lead fw-bold">Tools</div>
+        <div class="closeSideTools pointer">
+          <i class="fa fa-xmark lead text-danger" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="select-color border-bot-g">
+        <div class="p-4">
+          <div class="fs-15 fw-bold mb-3">Select Color</div>
+          <div class="colors d-flex gap flex-wrap" style="--gap:7px">
+            <div class="box-color d-flex align-items-center justify-content-center rounded-2 position-relative pointer active" data-color="#64b496" style="background: #64b496;"></div>
+            <div class="box-color d-flex align-items-center justify-content-center rounded-2 position-relative pointer" data-color="#f5885f" style="background: #f5885f;"></div>
+            <div class="box-color d-flex align-items-center justify-content-center rounded-2 position-relative pointer" data-color="#ae8d62" style="background: #ae8d62;"></div>
+            <div class="box-color d-flex align-items-center justify-content-center rounded-2 position-relative pointer" data-color="#3f51b5" style="background: #3f51b5;"></div>
+            <div class="box-color d-flex align-items-center justify-content-center rounded-2 position-relative pointer" data-color="#f44336" style="background: #f44336;"></div>
+            <div class="box-color d-flex align-items-center justify-content-center rounded-2 position-relative pointer" data-color="#e91e4c" style="background: #e91e4c;"></div>
+            <div class="box-color d-flex align-items-center justify-content-center rounded-2 position-relative pointer" data-color="#607d8b" style="background: #607d8b;"></div>
+            <div class="box-color d-flex align-items-center justify-content-center rounded-2 position-relative pointer" data-color="#5392d2" style="background: #5392d2;"></div>
+            <div class="box-color d-flex align-items-center justify-content-center rounded-2 position-relative pointer" data-color="#03492f" style="background: #03492f;"></div>
+            <div class="box-color d-flex align-items-center justify-content-center rounded-2 position-relative pointer" data-color="#9655ca" style="background: #9655ca;"></div>
+          </div>
+        </div>
+      </div>
+      <div class="select-theme p-4 border-bot-g">
+        <div class="fs-15 fw-bold mb-3">Select Theme</div>
+        <div class="themes d-flex gap" style="--gap:10px">
+          <div class="box-theme rounded-2 position-relative d-flex align-items-center pointer justify-content-center" data-theme="dark"></div>
+          <div class="box-theme rounded-2 position-relative d-flex align-items-center pointer justify-content-center active" data-theme="light"></div>
+        </div>
+      </div>
+    </div>
+    <!-- End Aside Tools -->
+    <!-- Start Masseges -->
+    <div class="massge cartProd position-fixed rounded-2 px-4 py-3">
+      <span class="va"></span> product in <span class="c-primary">Cart</span> Successfully!
+    </div>
+    <div class="massge loveProd position-fixed rounded-2 px-4 py-3">
+      <span class="va"></span> product in <span class="c-primary">Whishlist</span> Successfully!
+    </div>
+    <!-- End Masseges -->
+  <!-- Popper -->
+  <script src="js/popper.min.js"></script>
+  <!-- JQueray Libraray -->
+  <script src="js/jquery.min.js"></script>
+  <!-- Owl Carousel Library -->
+  <script src="js/owl.carousel.min.js"></script>
+  <!-- Bootstrap Library -->
+  <script src="js/bootstrap.min.js"></script>
+  <!-- Main JS File -->
+  <script src="js/carrot.js"></script>
+  </body>
+</html>
