@@ -89,6 +89,11 @@
   transition: var(--main-duration);
   cursor: pointer;
 }
+@media (width <= 375px) {
+  .main-button  {
+    width: 100%;
+  }
+}
 .main-button:hover {
   background: #121212;
 }
@@ -160,6 +165,7 @@ input:focus {
 .navbar {
   position: relative;
   z-index: 4;
+  overflow: hidden;
 }
 .navbar .uppernav {
   border-bottom: 1px var(--border) solid;
@@ -192,6 +198,9 @@ input:focus {
 @media (width <= 767px) {
   .navbar .uppernav form .select::before {
     right: 3px;
+  }
+  .navbar .uppernav form {
+    scale: .9;
   }
 }
 .toggle-menu {
